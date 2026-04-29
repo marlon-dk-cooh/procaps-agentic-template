@@ -1,0 +1,11 @@
+agent:
+  name: agent_template_demo
+  is_rag_required: false
+  is_mcp_used: false
+
+rag:
+  provider: azure_search
+  top_k: 5
+
+mcp:
+  servers: []

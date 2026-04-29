@@ -1,0 +1,5 @@
+{
+  "graphs": {
+    "agent_template_demo": "./agents/demo_agent.py:agent_template_demo"
+  }
+}

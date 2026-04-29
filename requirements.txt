@@ -1,0 +1,15 @@
+# Core runtime
+deepagents
+langchain
+langchain-core
+langgraph
+pydantic
+PyYAML
+typing-extensions
+
+# Azure integrations
+azure-search-documents
+langchain-openai
+
+# Development and tests
+pytest
