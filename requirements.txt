@@ -4,12 +4,20 @@ langchain
 langchain-core
 langgraph
 pydantic
+pydantic-settings
 PyYAML
 typing-extensions
 
 # Azure integrations
 azure-search-documents
 langchain-openai
+azure-identity
+azure-keyvault-secrets
 
 # Development and tests
 pytest
+
+# FastAPI and uvicorn for running the MCP server
+fastapi
+uvicorn
+fastapi[standard]

@@ -1,0 +1,47 @@
+# ============================================================================
+# SECRETS MANAGEMENT
+# ============================================================================
+# Configuration for retrieving sensitive credentials
+secrets:
+  # Provider for secret storage (azure_key_vault, aws_secrets_manager, etc.)
+  provider: "azure_key_vault"
+
+  # The full URL to your specific Azure Key Vault
+  vault_url: "https://azkvaprocapsdevservicios.vault.azure.net/"
+  # ============================================================================
+  # LARGE LANGUAGE MODELS (LLMs)
+  # ============================================================================
+  # Configuration for AI models used in reasoning and text generation
+llms:
+  # The active default model. Change this to swap models globally!
+  default_model: "gpt-5.4-mini"
+
+  # Primary model for reasoning tasks (e.g. gpt4_reasoner, gpt4o, gpt4o-mini, etc.)
+  gpt-5.4-mini:
+    # Provider for the model (azure_foundry, azure_openai, etc.)
+    provider: "azure_openai"
+
+    # Azure OpenAI service endpoint (loaded from Key Vault)
+    endpoint: "${KV-AZFoundry-Endpoint}"
+
+    # API authentication key (loaded from Key Vault)
+    api_key: "${KV-AZFoundry-Key}"
+
+    # Azure OpenAI API version (e.g., "2026-03-17-preview")
+    api_version: "${KV-AZFoundry-Model-LLM-API-Version}"
+
+    # Deployment name for the gpt-5.4-mini model in Azure OpenAI
+    deployment_name: "${KV-AZFoundry-Model-LLM-Name}"
+
+    # Temperature controls randomness (0.0 = deterministic, 1.0 = creative)
+    temperature: 0.0
+
+    # Maximum tokens in the response
+    max_tokens: 2000
+
+# memory:
+#   cosmosdb_endpoint: "${KV-AZStorage-Endpoint}"
+#   cosmosdb_container: "agent-test"
+#   cosmosdb_partition_key: "/tenantId"
+#   cosmosdb_key: "${KV-AZStorage-Key}"
+#   azure_key_vault_name: "${KV-Name-AZStorage}"
