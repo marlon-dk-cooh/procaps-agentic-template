@@ -11,7 +11,7 @@ from typing import Any
 from schemas.settings import McpSettings
 from src.errors import FrameworkConfigurationError
 
-
+# Consume agent from Copilot Studio.
 class McpToolLoader:
     """Loads MCP-provided tools when MCP is enabled."""
 

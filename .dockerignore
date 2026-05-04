@@ -15,3 +15,16 @@ temp/
 # Git files
 .git
 .gitignore
+
+# CI/CD pipeline definitions (not needed at runtime)
+Pipelines/
+
+# Tests and dev tooling
+tests/
+.pytest_cache/
+.env
+.env.example
+
+# IDE / editor
+.vscode/
+.idea/
